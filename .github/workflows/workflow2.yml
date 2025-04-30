@@ -1,3 +1,14 @@
+name: workflow2
+on: workflow_dispatch
+jobs: 
+  output_event:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Print the event details
+       run: echo{{toJSON(github.event)}}
+
+
+
 # name: workflow2
 # on: issues
 # jobs:
